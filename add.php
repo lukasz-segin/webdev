@@ -23,6 +23,16 @@ include( 'session2.php' );
 
 	if(isset($_POST['autor'])) {
 		$id = isSet($_POST['id']) ? intval($_POST['id']) : 0;
+
+		if( isset( $_FILES[ 'cover' ][ 'error' ] ) && $_FILES[ 'cover' ][ 'error' ] == 0) {
+
+      $imagine = new Imagine\Gd\Imagine();
+
+      echo '<pre>';
+      print_r( $_FILES[ 'cover' ][ 'error' ] );
+      die();
+    }
+
 		if ($id > 0) {
 			$sth = $pdo->prepare( 'UPDATE regal SET autor=:autor, tytul=:tytul, recenzja=:recenzja, cat_id=:cat_id WHERE id = :id' );
 		$sth->bindParam( ':id', $_POST['id']);
@@ -53,7 +63,7 @@ include( 'session2.php' );
 
 	$category = $sth2->fetchAll(); // TO ROBIMY PRZY WIELU REKORDACH
 ?>
-<form method="post" action="add.php">
+<form method="post" action="add.php" enctype="multipart/form-data">
 
 <?php 
 	if ($idGet > 0) {
@@ -74,6 +84,7 @@ include( 'session2.php' );
 	<br/><br/>
 
 	Tytul: <input type="text" name="tytul" <?php if(isSet($result['tytul'])) echo 'value="'.$result['tytul'].'"'; ?> ><br/><br/>
+	Okładka: <input type="file" name="cover"><br/><br/>
 	Recenzja: <textarea name="recenzja"> <?php if(isSet($result['recenzja'])) echo $result['recenzja']; ?> </textarea><br/><br/>
 	<input type="submit" value="Zapisz">
 </form>
