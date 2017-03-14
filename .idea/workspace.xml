@@ -41,23 +41,38 @@
       <file leaf-file-name="add.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="108">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding>
-                <marker date="1489517425408" expanded="true" signature="715:809" ph="UPDATE regal... " />
-                <marker date="1489517425408" expanded="true" signature="892:985" ph="INSERT INTO regal... " />
-                <marker date="1489517425408" expanded="true" signature="1379:1413" ph="SELECT * FRO... regal" />
-                <marker date="1489517425408" expanded="true" signature="1564:1604" ph="SELECT * FRO... category" />
+                <marker date="1489521864208" expanded="true" signature="1382:1490" ph="UPDATE regal... " />
+                <marker date="1489521864208" expanded="true" signature="1577:1615" ph="SELECT cover... regal" />
+                <marker date="1489521864208" expanded="true" signature="1943:2037" ph="UPDATE regal... " />
+                <marker date="1489521864208" expanded="true" signature="2130:2238" ph="INSERT INTO regal... " />
+                <marker date="1489521864208" expanded="true" signature="2708:2742" ph="SELECT * FRO... regal" />
+                <marker date="1489521864208" expanded="true" signature="2893:2933" ph="SELECT * FRO... category" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name="usun.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usun.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <marker date="1489523502528" expanded="true" signature="291:329" ph="SELECT cover... regal" />
+                <marker date="1489523502528" expanded="true" signature="636:668" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -73,27 +88,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loop.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loop.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="558">
+              <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
               <folding>
-                <marker date="1489333376241" expanded="true" signature="378:414" ph="SELECT COUNT... regal" />
-                <marker date="1489333376241" expanded="true" signature="595:721" ph="SELECT r.*, regal" />
-                <marker date="1489333376241" expanded="true" signature="2260:2282" ph="SELECT * FRO... stojak" />
-                <marker date="1489333376241" expanded="true" signature="2863:2946" ph="SELECT a.id,... stojak" />
+                <marker date="1489523767233" expanded="true" signature="376:412" ph="SELECT COUNT... regal" />
+                <marker date="1489523767233" expanded="true" signature="593:719" ph="SELECT r.*, regal" />
+                <marker date="1489523767233" expanded="true" signature="1851:2057" ph="..." />
+                <marker date="1489523767233" expanded="true" signature="2136:2142" ph=" " />
+                <marker date="1489523767233" expanded="true" signature="2191:2197" ph=" " />
+                <marker date="1489523767233" expanded="true" signature="2447:2453" ph=" " />
+                <marker date="1489523767233" expanded="true" signature="2508:2514" ph=" " />
+                <marker date="1489523767233" expanded="true" signature="2577:2583" ph=" " />
+                <marker date="1489523767233" expanded="true" signature="2646:2668" ph="SELECT * FRO... stojak" />
+                <marker date="1489523767233" expanded="true" signature="2715:2849" ph="..." />
+                <marker date="1489523767233" expanded="true" signature="2914:2936" ph="..." />
+                <marker date="1489523767233" expanded="true" signature="3249:3332" ph="SELECT a.id,... stojak" />
+                <marker date="1489523767233" expanded="true" signature="3379:3515" ph="..." />
+                <marker date="1489523767233" expanded="true" signature="3587:3638" ph="..." />
+                <marker date="1489523767233" expanded="true" signature="3657:3679" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baza.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/baza.php">
+      <file leaf-file-name="add_cat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_cat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <marker date="1489073682000" expanded="true" signature="164:209" ph="UPDATE categ... " />
+                <marker date="1489073682000" expanded="true" signature="295:336" ph="INSERT INTO category... " />
+                <marker date="1489073682000" expanded="true" signature="579:616" ph="SELECT * FRO... category" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,10 +134,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/baza.php" />
-        <option value="$PROJECT_DIR$/loop.php" />
-        <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/add.php" />
+        <option value="$PROJECT_DIR$/usun.php" />
+        <option value="$PROJECT_DIR$/loop.php" />
       </list>
     </option>
   </component>
@@ -176,12 +207,12 @@
       <workItem from="1489172202152" duration="1300000" />
       <workItem from="1489326986848" duration="3146000" />
       <workItem from="1489331195473" duration="3588000" />
-      <workItem from="1489510508531" duration="3738000" />
+      <workItem from="1489510508531" duration="9412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13186000" />
+    <option name="totallyTimeSpent" value="18860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,14 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_cat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/baza.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -378,15 +401,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loop.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="72">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_cat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
-            <marker date="1489333376241" expanded="true" signature="378:414" ph="SELECT COUNT... regal" />
-            <marker date="1489333376241" expanded="true" signature="595:721" ph="SELECT r.*, regal" />
-            <marker date="1489333376241" expanded="true" signature="2260:2282" ph="SELECT * FRO... stojak" />
-            <marker date="1489333376241" expanded="true" signature="2863:2946" ph="SELECT a.id,... stojak" />
+            <marker date="1489073682000" expanded="true" signature="164:209" ph="UPDATE categ... " />
+            <marker date="1489073682000" expanded="true" signature="295:336" ph="INSERT INTO category... " />
+            <marker date="1489073682000" expanded="true" signature="579:616" ph="SELECT * FRO... category" />
           </folding>
         </state>
       </provider>
@@ -401,32 +431,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <marker date="1489517425408" expanded="true" signature="715:809" ph="UPDATE regal... " />
-            <marker date="1489517425408" expanded="true" signature="892:985" ph="INSERT INTO regal... " />
-            <marker date="1489517425408" expanded="true" signature="1379:1413" ph="SELECT * FRO... regal" />
-            <marker date="1489517425408" expanded="true" signature="1564:1604" ph="SELECT * FRO... category" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c8414e00a5c.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c841c2938ba.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c8440f2dfb6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c8444c864c9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/org_58c847dd86265.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/org_58c849bc2d035.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c84bcb1c39b.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/org_58c84bcb1c39b.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c84ba385dad.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/cover_58c84c525c8b0.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/org_58c84ba385dad.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/org_58c84c525c8b0.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <marker date="1489523502528" expanded="true" signature="291:329" ph="SELECT cover... regal" />
+            <marker date="1489523502528" expanded="true" signature="636:668" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <marker date="1489521864208" expanded="true" signature="1382:1490" ph="UPDATE regal... " />
+            <marker date="1489521864208" expanded="true" signature="1577:1615" ph="SELECT cover... regal" />
+            <marker date="1489521864208" expanded="true" signature="1943:2037" ph="UPDATE regal... " />
+            <marker date="1489521864208" expanded="true" signature="2130:2238" ph="INSERT INTO regal... " />
+            <marker date="1489521864208" expanded="true" signature="2708:2742" ph="SELECT * FRO... regal" />
+            <marker date="1489521864208" expanded="true" signature="2893:2933" ph="SELECT * FRO... category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <marker date="1489523767233" expanded="true" signature="376:412" ph="SELECT COUNT... regal" />
+            <marker date="1489523767233" expanded="true" signature="593:719" ph="SELECT r.*, regal" />
+            <marker date="1489523767233" expanded="true" signature="1851:2057" ph="..." />
+            <marker date="1489523767233" expanded="true" signature="2136:2142" ph=" " />
+            <marker date="1489523767233" expanded="true" signature="2191:2197" ph=" " />
+            <marker date="1489523767233" expanded="true" signature="2447:2453" ph=" " />
+            <marker date="1489523767233" expanded="true" signature="2508:2514" ph=" " />
+            <marker date="1489523767233" expanded="true" signature="2577:2583" ph=" " />
+            <marker date="1489523767233" expanded="true" signature="2646:2668" ph="SELECT * FRO... stojak" />
+            <marker date="1489523767233" expanded="true" signature="2715:2849" ph="..." />
+            <marker date="1489523767233" expanded="true" signature="2914:2936" ph="..." />
+            <marker date="1489523767233" expanded="true" signature="3249:3332" ph="SELECT a.id,... stojak" />
+            <marker date="1489523767233" expanded="true" signature="3379:3515" ph="..." />
+            <marker date="1489523767233" expanded="true" signature="3587:3638" ph="..." />
+            <marker date="1489523767233" expanded="true" signature="3657:3679" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

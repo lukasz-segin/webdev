@@ -1,9 +1,9 @@
 <?php
 include( 'session2.php' );
 
-	// echo 'POST<pre>';
-	// echo print_r($tbl);
-	// echo '</pre>';
+	 echo 'POST<pre>';
+	 echo print_r( $_POST );
+	 echo '</pre>';
 	if(isset($_GET['msg']))
 		echo $_GET['msg'].'<br/>';
 
@@ -16,7 +16,7 @@ include( 'session2.php' );
 
 	$count = $pdo->query( 'SELECT COUNT( id ) as cnt FROM regal' )->fetch()[ 'cnt' ];
 
-  $page = isSet($_GET['page']) ? intval($_GET['page'] - 1) : 1;
+  $page = isSet($_GET['page']) ? intval($_GET['page'] - 1) : 0;
 
   $limit = 10;
 
@@ -40,6 +40,7 @@ include( 'session2.php' );
     echo '<tr>';
       echo '<th>Id</th>';
       echo '<th>Tytuł</th>';
+      echo '<th>Okładka</th>';
       echo '<th>Autor</th>';
       echo '<th>Recenzja</th>';
       echo '<th>Kategoria</th>';
@@ -50,12 +51,20 @@ include( 'session2.php' );
       echo '<tr>';
       echo '<td>'.$value['id'].'</td>';
       echo '<td>'.$value['tytul'].'</td>';
+      echo '<td>';
+        if ( $value['cover'] ) {
+          echo '<a target="_blank" href="img/' . str_replace( 'cover_', 'org_', $value['cover'] ) . '"><img src="img/' . $value['cover'] . '"></a>';
+        } else {
+          echo 'Brak okładki';
+        }
+      echo '</td>';
       echo '<td>'.$value['autor'].'</td>';
       echo '<td>'.$value['recenzja'].'</td>';
       echo '<td>'.$value['Nazwa_cat'].'</td>';
       echo '<td>
         <a href="usun.php?id='.$value['id'].'">Usun</a> | 
-        <a href="add.php?id='.$value['id'].'">Edycja</a>
+        <a href="add.php?id='.$value['id'].'">Edycja</a> |
+        <a href="usun.php?id='.$value['id'].'&photoonly=1">Usun zdjęcie</a>
       </td>';
       echo '</tr>';
     }

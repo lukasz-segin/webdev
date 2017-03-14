@@ -24,20 +24,59 @@ include( 'session2.php' );
 	if(isset($_POST['autor'])) {
 		$id = isSet($_POST['id']) ? intval($_POST['id']) : 0;
 
-		if( isset( $_FILES[ 'cover' ][ 'error' ] ) && $_FILES[ 'cover' ][ 'error' ] == 0) {
+		$fileName = 0;
+
+		if( isset( $_FILES['cover']['error'] ) && $_FILES['cover']['error'] == 0) {
+
+		  require( "vendor/autoload.php" );
+
+		  $uid = uniqid();
+
+		  $ext = pathinfo( $_FILES['cover']['name'], PATHINFO_EXTENSION);
+
+		  $fileName = 'cover_' . $uid . '.' . $ext;
+		  $fileNameOrg = 'org_' . $uid . '.' . $ext;
 
       $imagine = new Imagine\Gd\Imagine();
+      $size    = new Imagine\Image\Box(200, 200);
+//      $mode    = Imagine\Image\ImageInterface::THUMBNAIL_INSET; //scale
+// or
+      $mode    = Imagine\Image\ImageInterface::THUMBNAIL_OUTBOUND; //cut
 
-      echo '<pre>';
-      print_r( $_FILES[ 'cover' ][ 'error' ] );
-      die();
+      $imagine->open( $_FILES['cover']['tmp_name'])
+        ->thumbnail($size, $mode)
+        ->save( __DIR__ . '/img/' . $fileName )
+      ;
+
+      move_uploaded_file( $_FILES['cover']['tmp_name'], __DIR__ . '/img/' . $fileNameOrg); // add original file to img catalog
     }
 
 		if ($id > 0) {
-			$sth = $pdo->prepare( 'UPDATE regal SET autor=:autor, tytul=:tytul, recenzja=:recenzja, cat_id=:cat_id WHERE id = :id' );
-		$sth->bindParam( ':id', $_POST['id']);
+
+		  if( $fileName ) { //edit cover
+        $sth = $pdo->prepare( 'UPDATE regal SET autor=:autor, tytul=:tytul, recenzja=:recenzja, cat_id=:cat_id, cover=:cover WHERE id = :id' );
+        $sth->bindParam( ':cover', $fileName);
+
+        $sthCov = $pdo->prepare( 'SELECT cover FROM regal WHERE id = :id');
+        $sthCov->bindParam( ':id', $id );
+        $sthCov->execute();
+
+        $cover = $sthCov->fetch()['cover'];
+
+        if( $cover ) {
+          unlink( __DIR__ . '/img/' . $cover);
+          unlink( __DIR__ . '/img/' . str_replace( 'cover_', 'org_', $cover ) );
+        }
+
+      } else {
+        $sth = $pdo->prepare( 'UPDATE regal SET autor=:autor, tytul=:tytul, recenzja=:recenzja, cat_id=:cat_id WHERE id = :id' );
+      }
+		  $sth->bindParam( ':id', $_POST['id']);
 		} else {
-			$sth = $pdo->prepare( 'INSERT INTO regal(autor, tytul, recenzja, cat_id) VALUES (:autor, :tytul, :recenzja, :cat_id)' );
+			$sth = $pdo->prepare( 'INSERT INTO regal(autor, tytul, recenzja, cat_id, cover) VALUES (:autor, :tytul, :recenzja, :cat_id, :cover)' );
+			if( $fileName ) {
+        $sth->bindParam( ':cover', $fileName);
+      }
 		}
 
 		$sth->bindParam( ':autor', $_POST['autor']);
@@ -85,6 +124,11 @@ include( 'session2.php' );
 
 	Tytul: <input type="text" name="tytul" <?php if(isSet($result['tytul'])) echo 'value="'.$result['tytul'].'"'; ?> ><br/><br/>
 	Okładka: <input type="file" name="cover"><br/><br/>
-	Recenzja: <textarea name="recenzja"> <?php if(isSet($result['recenzja'])) echo $result['recenzja']; ?> </textarea><br/><br/>
+  <?php
+  if( isset( $result['cover'] ) && $result['cover']) {
+    echo '<img src="img/' . $result['cover'] . '">';
+  }
+  ?>
+	Recenzja: <textarea name="recenzja"><?php if(isSet($result['recenzja'])) echo $result['recenzja']; ?></textarea><br/><br/>
 	<input type="submit" value="Zapisz">
 </form>
