@@ -1,8 +1,8 @@
 <?php
-include( 'session2.php' );
+include('session2.php');
 
 	 echo 'POST<pre>';
-	 echo print_r( $_POST );
+	 echo print_r($_POST);
 	 echo '</pre>';
 	if(isset($_GET['msg']))
 		echo $_GET['msg'].'<br/>';
@@ -10,11 +10,11 @@ include( 'session2.php' );
 	echo '<br/><a href="add.php">Dodaj Ksiazke</a><br/>';
 	echo '<br/><a href="add_cat.php">Dodaj Kategorę</a><br/>';
 
-	function t1( $val, $min, $max ) {
-	  return ( $val >= $min && $val <= $max );
+	function t1($val, $min, $max) {
+	  return ($val >= $min && $val <= $max);
   }
 
-	$count = $pdo->query( 'SELECT COUNT( id ) as cnt FROM regal' )->fetch()[ 'cnt' ];
+	$count = $pdo->query('SELECT COUNT(id) as cnt FROM regal')->fetch()[ 'cnt' ];
 
   $page = isSet($_GET['page']) ? intval($_GET['page'] - 1) : 0;
 
@@ -22,7 +22,7 @@ include( 'session2.php' );
 
   $from = $page * $limit;
 
-  $allPage = ceil( $count / $limit );
+  $allPage = ceil($count / $limit);
 
   $sql = 'SELECT r.*, c.name as Nazwa_cat FROM `regal` r LEFT JOIN category c ON r.cat_id = c.id ORDER BY r.id ASC LIMIT ' . $from . ', ' . $limit;
 
@@ -34,7 +34,7 @@ include( 'session2.php' );
   echo 'SQL: ' . $sql . '<br/>';
 
 	echo 'Regal:<br>';
-	$tbl = $pdo->query( $sql );
+	$tbl = $pdo->query($sql);
 
 	echo '<table border="1">';
     echo '<tr>';
@@ -52,7 +52,7 @@ include( 'session2.php' );
       echo '<td>'.$value['id'].'</td>';
       echo '<td>'.$value['tytul'].'</td>';
       echo '<td>';
-        if ( $value['cover'] ) {
+        if ($value['cover']) {
           echo '<a target="_blank" href="img/' . str_replace( 'cover_', 'org_', $value['cover'] ) . '"><img src="img/' . $value['cover'] . '"></a>';
         } else {
           echo 'Brak okładki';

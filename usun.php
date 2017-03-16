@@ -1,9 +1,9 @@
 <?php
-	include( 'session2.php' );
+	include('session2.php');
 
-	$id = isSet( $_GET['id'] ) ? intval( $_GET['id'] ) : 0;
+	$id = isSet($_GET['id']) ? intval($_GET['id']) : 0;
 
-	$photo = isset( $_GET['photoonly'] ) ? intval( $_GET['photoonly'] ) : 0;
+	$photo = isset($_GET['photoonly']) ? intval($_GET['photoonly']) : 0;
 
 //echo 'get<br/>';
 //echo '<pre>';
@@ -11,20 +11,23 @@
 //echo '</pre>';
 	if($id > 0) {
 
-    $sthCov = $pdo->prepare( 'SELECT cover FROM regal WHERE id = :id');
-    $sthCov->bindParam( ':id', $id );
+    $sthCov = $pdo->prepare('SELECT cover FROM regal WHERE id = :id');
+    $sthCov->bindParam(':id', $id);
     $sthCov->execute();
 
     $cover = $sthCov->fetch()['cover'];
 
-    if( $cover ) {
-      unlink( __DIR__ . '/img/' . $cover);
-      unlink( __DIR__ . '/img/' . str_replace( 'cover_', 'org_', $cover ) );
+    if($cover) {
+      unlink(__DIR__ . '/img/' . $cover);
+      unlink(__DIR__ . '/img/' . str_replace('cover_', 'org_', $cover));
+      $sthCover = $pdo->prepare('UPDATE regal SET cover = 0 WHERE id = :id');
+      $sthCover->bindParam(':id', $id);
+      $sthCover->execute();
     }
 
-    if( $photo == 0 ) {
-      $sth = $pdo->prepare( 'DELETE FROM regal WHERE id = :id');
-      $sth->bindParam( ':id', $id );
+    if($photo == 0) {
+      $sth = $pdo->prepare('DELETE FROM regal WHERE id = :id');
+      $sth->bindParam(':id', $id);
       $sth->execute();
       header('location: loop.php?msg=Rekord zostal usuniety');
     }
